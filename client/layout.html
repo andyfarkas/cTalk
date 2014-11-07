@@ -1,0 +1,28 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coccotte Systems CTalk</title>
+</head>
+<body>
+
+</body>
+
+<template name="layout">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">cTalk by Coccotte Systems</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons }} <!-- here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        {{> yield}}
+    </div>
+</template>
