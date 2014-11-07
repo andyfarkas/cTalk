@@ -1,5 +1,5 @@
 Template.message.helpers({
     postedAtFormatted: function() {
-        return moment(this.postedAt).format('DD.MM HH:MM');
+        return moment(this.createdAt).format('DD.MM hh:mm');
     }
 });

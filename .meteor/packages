@@ -11,4 +11,6 @@ mrt:moment
 jquery
 ian:accounts-ui-bootstrap-3
 accounts-password
+mizzao:user-status
+sacha:spin
 

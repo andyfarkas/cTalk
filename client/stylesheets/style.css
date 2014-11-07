@@ -2,27 +2,14 @@
     margin-top: 80px;
 }
 
-.messages {
-    padding: 5px;
-    background-color: #f0f9fb;
-    border: 1px solid;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-}
-
-.messages .contents {
-    width: 80%;
-    float: left;
-}
-
-.messages .created-at {
-    float: right;
-    width: 20%;
-    color: #aaaaaa;
-    text-align: right;
+.media-body {
+    display: block;
 }
 
 .cleaner {
     clear: both;
+}
+
+.posts-avatar {
+    max-height: 50px;
 }

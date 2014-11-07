@@ -1,20 +1,50 @@
 <template name="home">
-    <div class="messages">
-        <div style="position: absolute; bottom: 0px; width: 99%; max-height: 100%; overflow-y:auto; overflow-x: hidden; padding: 3px;">
-            {{#each messages}}
-                {{> message}}
-            {{/each}}
-        <div class="cleaner"></div>
-        </div>
-    </div>
 
-    {{#if currentUser}}
-        <form>
-            <div class="form-group">
-                <input type="text" name="message" class="form-control" placeholder="Write something smart here and hit ENTER ...."/>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-info">
+
+                <div class="panel-heading">Recent shit</div>
+
+                <div class="panel-body messages">
+                    <ul class="media-list">
+                        {{#each messages}}
+                            {{> message}}
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <div class="panel-footer">
+                    {{#if currentUser}}
+                    <form>
+                        <div class="input-group">
+                            <input type="text" placeholder="Enter message ..." name="message" class="form-control">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-info">SEND</button>
+                            </span>
+                        </div>
+                    </form>
+                    {{else}}
+                    <p>You need to join <strong>Coccotte Systems</strong> to post here !!</p>
+                    {{/if}}
+                </div>
             </div>
-        </form>
-    {{else}}
-        <p>You need to join <strong>Coccotte Systems</strong> to post here !!</p>
-    {{/if}}
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Who is online
+                </div>
+                <div class="panel-body">
+                    <ul class="media-list">
+                        {{#each onlineUsers}}
+                            {{> onlineUser}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </template>
