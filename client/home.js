@@ -9,11 +9,11 @@ Template.home.helpers({
 
 var formatMessages = function() {
     var messages = $('.messages');
-    messages.scrollTop(messages.prop('scrollHeight'));
     messages.css({
         'height': $(window).height() - 200 + 'px',
         'overflow': 'auto'
     });
+    messages.scrollTop(messages.prop('scrollHeight'));
 };
 
 Template.home.events({
@@ -34,7 +34,7 @@ Template.home.events({
 });
 
 Template.home.rendered = function() {
-    $(window).resize();
+    formatMessages();
 };
 
 Meteor.startup(function(){
